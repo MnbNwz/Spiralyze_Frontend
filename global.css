@@ -16,7 +16,6 @@ p,
 a {
   font-weight: 400;
   font-size: 14px;
-  /* line-height: 41px; */
   color: #fff;
   &:first-child {
     text-decoration: underline;

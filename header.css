@@ -23,30 +23,25 @@
   width: 100%;
 }
 .header_nav {
-  justify-content: baseline;
   padding: 2.1875rem 8rem;
-}
-.header_nav col-6 {
-  /* flex-direction: column;
-  justify-content: space-between; */
 }
 .header_elements {
   justify-content: space-evenly;
   align-items: center;
+  gap: 1.9375rem;
 }
 .header_elements span {
   font-weight: bold; /* Ensure the phone number stands out */
   color: #5bc8af;
 }
 .intervention_text {
-  margin-top: 10.65625rem;
+  margin-top: 64px;
 }
 .intervention_text h1 {
   text-align: start;
+  line-height: 72px;
 }
-.intervention_text svg {
-  width: 31.4375rem;
-}
+
 .intervention_text p {
   font-weight: 400;
   line-height: 24px;
@@ -56,11 +51,16 @@
 }
 
 .contact-form {
-  /* Adjust styling as needed */
-  background-color: #349b5f; /* Green background */
+  background-color: #349b5f;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact_form_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 label {
@@ -84,4 +84,9 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.form_Container {
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
