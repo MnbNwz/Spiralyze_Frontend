@@ -1,8 +1,6 @@
 .header {
   position: relative;
   width: 100%;
-  min-height: 650px;
-  /* height: 100; */
 
   background-image: linear-gradient(
       180deg,
@@ -15,12 +13,32 @@
   background-repeat: no-repeat; /* Prevents repetition of the image */
   background-position: center; /* Centers the image */
 }
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(25, 77, 65, 0.2); /* Color overlay with transparency */
+  backdrop-filter: blur(1px); /* Creates the blur effect */
+  z-index: 1; /* Ensures it is below the text content */
+}
+
+.container {
+  position: relative; /* Add this line */
+  min-height: 40.625rem;
+  z-index: 200;
+}
 
 .wave-container {
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  z-index: 200;
 }
 .header_nav {
   padding: 2.1875rem 8rem;
@@ -34,9 +52,9 @@
   font-weight: bold; /* Ensure the phone number stands out */
   color: #5bc8af;
 }
-.intervention_text {
-  margin-top: 8rem;
-}
+/* .intervention_text {
+  margin-top: 2rem;
+} */
 .intervention_text h1 {
   text-align: start;
   line-height: 72px;
@@ -78,6 +96,8 @@ select {
   border: none; /* Remove any default borders */
   outline: none; /* Remove default focus outlines */
   box-shadow: none; /* Remove any default shadows */
+  background-color: transparent;
+  color: white;
 }
 
 .form_container {
@@ -102,7 +122,8 @@ button {
 }
 
 .contact-form {
-  padding: 3rem 20px;
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
 }
 .form_heading {
   margin: 2rem 0;
@@ -156,6 +177,7 @@ select.form-control {
 }
 
 .form-control {
+  height: 4rem;
   padding: 10px; /* Padding for input fields */
   border: 1px solid #ccc; /* Border style */
   border-radius: 5px; /* Rounded corners */
