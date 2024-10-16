@@ -164,28 +164,6 @@ select.form-control {
   border-width: 1px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
-.tooltip {
-  visibility: hidden; /* Initially hidden */
-  width: 200px; /* Tooltip width */
-  background-color: black; /* Tooltip background color */
-  color: #fff; /* Tooltip text color */
-  text-align: center; /* Center the text */
-  border-radius: 5px; /* Rounded corners */
-  padding: 8px; /* Padding around the text */
-  position: absolute; /* Positioning */
-  z-index: 1; /* Ensure it's above other elements */
-  bottom: 100%; /* Position above the input */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center adjustment */
-  margin-bottom: 8px; /* Space between tooltip and input */
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.3s; /* Fade-in effect */
-}
-
-.tooltip.show {
-  visibility: visible; /* Show tooltip */
-  opacity: 1; /* Fade in */
-}
 
 .form-control {
   height: 4rem;
@@ -250,4 +228,39 @@ select.form-control {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.tooltip {
+  position: absolute; /* Positioning */
+  visibility: hidden; /* Initially hidden */
+
+  background: #ff7777;
+  color: #fff; /* Tooltip text color */
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px; /* Padding around the text */
+  z-index: 1; /* Ensure it's above other elements */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s; /* Fade-in effect */
+  font-size: 13px;
+  margin: -6px 6px 0 0;
+}
+
+/* Arrow pointing down */
+.tooltip::after {
+  content: '';
+  position: absolute; /* Position the arrow */
+  bottom: 100%; /* Position above the tooltip */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center adjustment */
+  border-width: 6px; /* Size of the arrow */
+  border-style: solid; /* Arrow style */
+  border-color: transparent transparent #ff7777 transparent; /* Arrow color: black */
+}
+
+.tooltip.show {
+  visibility: visible; /* Show tooltip */
+  opacity: 1; /* Fade in */
+}
+.error-border {
+  border: 2px solid #ff7777; /* Change to your desired border color */
 }
