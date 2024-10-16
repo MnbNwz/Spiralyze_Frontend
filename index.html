@@ -174,57 +174,63 @@
                 <form id="contactForm">
                   <div style="margin: 0 0; display: flex; flex-direction: row">
                     <div class="form_container col-6">
-                      <!-- <label for="firstName">First Name:</label> -->
-                      <input
-                        placeholder="First Name"
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        class="form-control"
-                        required
-                        data-original-title="This field is required."
-                        title=""
-                      />
-                      <!-- <label for="businessEmail">Business Email:</label> -->
-                      <input
-                        placeholder="Business Email"
-                        type="email"
-                        id="businessEmail"
-                        name="businessEmail"
-                        class="form-control"
-                        required
-                        data-original-title="Please enter a valid email address."
-                        title=""
-                      />
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          class="form-control"
+                          required
+                          data-original-title="This field is required."
+                          title=""
+                        />
+                        <label for="firstName">First Name</label>
+                      </div>
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="email"
+                          id="businessEmail"
+                          name="businessEmail"
+                          class="form-control"
+                          required
+                          data-original-title="Please enter a valid email address."
+                          title=""
+                        />
+                        <label for="businessEmail">Business Email</label>
+                      </div>
                     </div>
 
                     <div class="form_container col-6">
-                      <!-- <label for="lastName">Last Name:</label> -->
-                      <input
-                        placeholder="Last Name"
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        class="form-control"
-                        required
-                        data-original-title="This field is required."
-                        title=""
-                      />
-
-                      <!-- <label for="company">Company:</label> -->
-                      <input
-                        placeholder="Company"
-                        type="text"
-                        id="company"
-                        name="company"
-                        class="form-control"
-                        data-original-title="Optional field."
-                        title=""
-                      />
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          class="form-control"
+                          required
+                          data-original-title="This field is required."
+                          title=""
+                        />
+                        <label for="lastName">Last Name</label>
+                      </div>
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="text"
+                          id="company"
+                          name="company"
+                          class="form-control"
+                          data-original-title="Optional field."
+                          title=""
+                        />
+                        <label for="company">Company</label>
+                      </div>
                     </div>
                   </div>
 
-                  <!-- <label for="country">Country:</label> -->
                   <select
                     id="country"
                     name="country"

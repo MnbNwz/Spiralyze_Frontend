@@ -7,7 +7,7 @@
       #194d41 0%,
       rgba(25, 77, 65, 0.7) 100%
     ),
-    url('https://s3-alpha-sig.figma.com/img/db7f/e8ff/1b8e208e84d3e2135effaf4c522a8105?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SY5mhYFK5EqD6g1Ztf5S5cFHPOgGu~508pPGWX3n8cYSu09my1MO3JIsW1iTdfe6YKc6jPW7GZxjb00TwjXJL~zkbJuWCa7qKtrCnK5P2QPpvZzYt8CmHGgFvSUJJK-rVZ91qLH~oDKwypWghABw5aCv~Y-v3zdR0CLoiYXtNKdbjtvUVzrxP~8nnlPfvbkkv0V2zI01R3bAn~WdxbvaOb8L0N7hRaerBswvTYsR07dWomN02TZxo5P638W798qD8CuO~r50l077XM-U7gm6J7c1Twry7t~ggBZcU6Nbx0jstfO9KPqnVNFgUobt0oES4I41Ro3iOkdwfn~4WM0B5g__');
+    url('/Assets//image 2.png');
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,16 +75,12 @@
   padding: 0 8rem;
 }
 
-label {
-  width: 95%;
-  display: block;
-  margin-bottom: 5px;
-}
-
 #contactForm input.form-control {
   width: 95% !important;
 }
 select {
+  -moz-appearance: none; /* Removes default styling in Firefox */
+
   color: #ffffffb2;
   -webkit-appearance: none;
   appearance: none;
@@ -92,6 +88,7 @@ select {
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: calc(100% - 8px) center;
+  overflow: hidden;
 }
 input,
 select {
@@ -151,9 +148,12 @@ form {
   width: 100%;
   flex-direction: column;
 }
+
+option {
+  width: 60%;
+}
 select.form-control {
   width: 97.5%; /* Consistent width with other inputs */
-  margin: 0 6px 10px; /* Add vertical space */
   padding: 8px; /* Better spacing inside select */
   border: 1px solid #ccc;
   border-radius: 4px; /* Optional rounded corners */
@@ -195,4 +195,59 @@ select.form-control {
   width: 100%; /* Full width */
   margin-bottom: 1rem; /* Space below inputs */
   position: relative; /* Positioning for tooltip */
+}
+.floating-label {
+  position: relative;
+}
+
+.floating-label input,
+.floating-label select {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: none;
+  outline: none;
+}
+
+.floating-label label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 1rem;
+  color: #aaa;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label select:focus + label,
+.floating-label select:not([value='']) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.75rem;
+  background-color: #2a7d6c;
+  color: #fff;
+  padding: 2px;
+}
+
+.floating-label select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form-control {
+  margin-bottom: 0.75rem;
+}
+
+.form_btn {
+  padding: 10px 20px;
+  color: #ffffffb2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
