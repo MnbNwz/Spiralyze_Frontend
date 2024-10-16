@@ -9,9 +9,9 @@
     ),
     url('https://s3-alpha-sig.figma.com/img/db7f/e8ff/1b8e208e84d3e2135effaf4c522a8105?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SY5mhYFK5EqD6g1Ztf5S5cFHPOgGu~508pPGWX3n8cYSu09my1MO3JIsW1iTdfe6YKc6jPW7GZxjb00TwjXJL~zkbJuWCa7qKtrCnK5P2QPpvZzYt8CmHGgFvSUJJK-rVZ91qLH~oDKwypWghABw5aCv~Y-v3zdR0CLoiYXtNKdbjtvUVzrxP~8nnlPfvbkkv0V2zI01R3bAn~WdxbvaOb8L0N7hRaerBswvTYsR07dWomN02TZxo5P638W798qD8CuO~r50l077XM-U7gm6J7c1Twry7t~ggBZcU6Nbx0jstfO9KPqnVNFgUobt0oES4I41Ro3iOkdwfn~4WM0B5g__');
 
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-repeat: no-repeat; /* Prevents repetition of the image */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .header::after {
   content: '';
@@ -21,13 +21,13 @@
   right: 0;
   bottom: 0;
 
-  background-color: rgba(25, 77, 65, 0.2); /* Color overlay with transparency */
-  backdrop-filter: blur(1px); /* Creates the blur effect */
-  z-index: 1; /* Ensures it is below the text content */
+  background-color: rgba(25, 77, 65, 0.2);
+  backdrop-filter: blur(1px);
+  z-index: 1;
 }
 
 .container {
-  position: relative; /* Add this line */
+  position: relative;
   min-height: 40.625rem;
   z-index: 200;
 }
@@ -49,12 +49,10 @@
   gap: 1.9375rem;
 }
 .header_elements span {
-  font-weight: bold; /* Ensure the phone number stands out */
+  font-weight: bold;
   color: #5bc8af;
 }
-/* .intervention_text {
-  margin-top: 2rem;
-} */
+
 .intervention_text h1 {
   text-align: start;
   line-height: 72px;
@@ -86,19 +84,27 @@ label {
 #contactForm input.form-control {
   width: 95% !important;
 }
-
+select {
+  color: #ffffffb2;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('/Assets//Polygon.svg');
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) center;
+}
 input,
 select {
   border: 1px solid #ffffff;
   border-radius: 2px;
   background-color: transparent;
-
-  border: none; /* Remove any default borders */
-  outline: none; /* Remove default focus outlines */
-  box-shadow: none; /* Remove any default shadows */
+  border: none;
+  outline: none;
+  box-shadow: none;
   background-color: transparent;
-  color: white;
+  color: #ffffffb2;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
@@ -106,8 +112,7 @@ input:-webkit-autofill:focus {
 input[data-autocompleted] {
   background-color: transparent !important;
 }
-.contact_form_container {
-}
+
 .form_container {
   display: flex;
   flex-direction: column;
@@ -116,9 +121,7 @@ input[data-autocompleted] {
 ::placeholder {
   color: #ffffffb2;
 }
-select {
-  color: #ffffffb2;
-}
+
 button {
   color: white;
   padding: 10px 20px;

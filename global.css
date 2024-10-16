@@ -125,3 +125,14 @@ ul {
 a {
   text-decoration: none;
 }
+@media (min-width: 1295px) and (max-width: 1379px) {
+  p {
+    font-size: 12px;
+  }
+}
+/* Tablets and small laptops */
+/* @media (min-width: 768px) and (max-width: 1279px) {
+  p {
+    font-size: 12px;
+  }
+} */
