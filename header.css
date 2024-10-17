@@ -233,7 +233,7 @@ select {
 .tooltip {
   position: absolute; /* Positioning */
   visibility: hidden; /* Initially hidden */
-
+  width: 95%;
   background: #ff7777;
   color: #fff; /* Tooltip text color */
   text-align: center; /* Center the text */
