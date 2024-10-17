@@ -12,6 +12,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: auto;
 }
 .header::after {
   content: '';
@@ -44,9 +45,9 @@
   padding: 2.1875rem 8rem;
 }
 .header_elements {
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.9375rem;
+  /* gap: 1.9375rem; */
 }
 .header_elements span {
   font-weight: bold;
@@ -70,6 +71,9 @@
   background: linear-gradient(180deg, #2a7d6c 0%, rgba(62, 105, 96, 0.62) 100%);
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
 }
 .form_Container {
   padding: 0 8rem;
@@ -94,7 +98,6 @@ input,
 select {
   border: 1px solid #ffffff;
   border-radius: 2px;
-  background-color: transparent;
   border: none;
   outline: none;
   box-shadow: none;
@@ -129,10 +132,6 @@ button {
   box-shadow: 0px 4px 6px 0px #00000014;
 }
 
-.contact-form {
-  margin-top: 1rem;
-  padding: 1rem 1.25rem;
-}
 .form_heading {
   margin: 2rem 0;
 }
@@ -150,7 +149,7 @@ form {
 }
 
 option {
-  width: 60%;
+  width: auto;
 }
 select.form-control {
   width: 97.5%; /* Consistent width with other inputs */
@@ -215,10 +214,8 @@ select.form-control {
   padding: 2px;
 }
 
-.floating-label select {
+select {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 .form-control {
@@ -267,4 +264,75 @@ select.form-control {
 }
 .error-border {
   border: 2px solid #ff7777; /* Change to your desired border color */
+}
+.tooltip-active {
+  width: 10%;
+}
+
+.contact_form_container {
+  margin-right: -1rem;
+  width: 40%;
+  margin-left: auto;
+}
+
+/* Media Query */
+
+@media (min-width: 1116px) and (max-width: 1379px) {
+  p {
+    font-size: 13px;
+  }
+  .header_nav {
+    padding: 2.1875rem 6rem;
+  }
+  .form_Container {
+    padding: 0 6rem;
+  }
+  .contact_form_container {
+    /* margin-right: -1rem;
+    width: 40%;
+    margin-left: auto; */
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1160px) {
+  p {
+    font-size: 12px;
+  }
+  .header_nav {
+    padding: 2.1875rem 5rem;
+  }
+  .form_Container {
+    padding: 0 6rem;
+  }
+  .contact_form_container {
+    width: 45%;
+    margin-left: auto;
+  }
+  .contact-form {
+    padding: 1rem;
+  }
+  .form_heading {
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  p {
+    font-size: 11px;
+  }
+  .header_nav {
+    padding: 2.1875rem 3rem;
+  }
+  .form_Container {
+    padding: 0 3rem;
+  }
+  .contact_form_container {
+    width: 48%;
+    margin-left: auto;
+  }
+  .contact-form {
+    padding: 1rem;
+  }
+  .form_heading {
+    margin: 1rem 0;
+  }
 }
