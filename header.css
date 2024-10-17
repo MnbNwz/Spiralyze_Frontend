@@ -279,7 +279,7 @@ select {
 
 @media (min-width: 1116px) and (max-width: 1379px) {
   p {
-    font-size: 13px;
+    font-size: 13.5px !important;
   }
   .header_nav {
     padding: 2.1875rem 6rem;
@@ -296,7 +296,7 @@ select {
 
 @media (min-width: 961px) and (max-width: 1160px) {
   p {
-    font-size: 12px;
+    font-size: 13px !important;
   }
   .header_nav {
     padding: 2.1875rem 5rem;
@@ -317,7 +317,7 @@ select {
 }
 @media (min-width: 768px) and (max-width: 960px) {
   p {
-    font-size: 11px;
+    font-size: 12.5px !important;
   }
   .header_nav {
     padding: 2.1875rem 3rem;
