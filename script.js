@@ -61,3 +61,44 @@ $('.form-control')
     // Check for the first empty field
     showFirstEmptyTooltip(); // Show the next empty field's tooltip if needed
   });
+
+
+
+
+// Function to calculate adjusted distance from the right edge of <p> to its container
+function calculateAdjustedDistanceToRight(pElement) {
+  // Get the bounding rectangle of the <p> element
+  const pRect = pElement.getBoundingClientRect();
+  
+  // Get the bounding rectangle of the container (parent element)
+  const containerRect = pElement.parentElement.getBoundingClientRect();
+
+  // Calculate 10% of the screen width
+  const tenPercentScreenWidth = window.innerWidth * 0.1;
+
+  // Calculate the distance
+  const distanceToRight = containerRect.right - tenPercentScreenWidth - pRect.right;
+
+  // Return the distance
+  return distanceToRight;
+}
+
+// // Function to update the margin-right of .smallHeader based on the distance calculated
+// function updateSmallHeaderMargin() {
+//   const paragraphElement = document.querySelector('.contact_p'); // Replace with your selector
+//   const adjustedDistanceRight = calculateAdjustedDistanceToRight(paragraphElement);
+  
+//   // Select the .smallHeader element
+//   const smallHeaderElement = document.querySelector('.smallHeader'); // Replace with your selector
+
+//   // Set the margin-right of the smallHeader to the negative of the calculated distance
+//   smallHeaderElement.style.paddingRight = `${-adjustedDistanceRight}px`;
+
+//   console.log(`Updated margin-right for .smallHeader: ${-adjustedDistanceRight}px`);
+// }
+
+// // Call the function to update the margin on page load or on resize
+// updateSmallHeaderMargin();
+
+// // Optionally, you can add an event listener to recalculate on window resize
+// window.addEventListener('resize', updateSmallHeaderMargin);

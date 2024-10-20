@@ -2,20 +2,19 @@
   position: relative;
   width: 100%;
 
-  background-image: linear-gradient(
-      180deg,
+  background-image: linear-gradient(180deg,
       #194d41 0%,
-      rgba(25, 77, 65, 0.7) 100%
-    ),
-    url('/Assets//image 2.png');
+      rgba(25, 77, 65, 0.7) 100%),
+    url("/Assets//image 2.png");
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: auto;
 }
+
 .header::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -41,28 +40,28 @@
   width: 100%;
   z-index: 200;
 }
+
 .header_nav {
   padding: 2.1875rem 8rem;
 }
+
 .header_elements {
   justify-content: space-between;
   align-items: center;
-  /* gap: 1.9375rem; */
 }
+
 .header_elements span {
   font-weight: bold;
   color: #5bc8af;
 }
 
-.intervention_text h1 {
-  text-align: start;
-  line-height: 72px;
-}
+
 
 .intervention_text p {
   font-weight: 400;
   line-height: 24px;
 }
+
 .get_text {
   border: 1px solid #ffffff;
 }
@@ -75,6 +74,12 @@
   margin-top: 1rem;
   padding: 1rem 1.25rem;
 }
+
+._786pForm {
+  width: 70% !important;
+
+}
+
 .form_Container {
   padding: 0 8rem;
 }
@@ -82,18 +87,21 @@
 #contactForm input.form-control {
   width: 95% !important;
 }
+
 select {
-  -moz-appearance: none; /* Removes default styling in Firefox */
+  -moz-appearance: none;
+  /* Removes default styling in Firefox */
 
   color: #ffffffb2;
   -webkit-appearance: none;
   appearance: none;
-  background-image: url('/Assets//Polygon.svg');
+  background-image: url("/Assets//Polygon.svg");
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: calc(100% - 8px) center;
   overflow: hidden;
 }
+
 input,
 select {
   border: 1px solid #ffffff;
@@ -109,6 +117,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
 input[data-autocompleted] {
   background-color: transparent !important;
 }
@@ -118,6 +127,7 @@ input[data-autocompleted] {
   flex-direction: column;
   align-items: center;
 }
+
 ::placeholder {
   color: #ffffffb2;
 }
@@ -135,13 +145,15 @@ button {
 .form_heading {
   margin: 2rem 0;
 }
+
 .form_btn {
-  width: 30%;
+  /* width: 30%; */
   cursor: pointer;
   align-self: center;
   font-size: 18;
   font-weight: 700;
 }
+
 form {
   display: flex;
   width: 100%;
@@ -151,29 +163,42 @@ form {
 option {
   width: auto;
 }
+
 select.form-control {
-  width: 97.5%; /* Consistent width with other inputs */
-  padding: 8px; /* Better spacing inside select */
+  width: 97.5%;
+  /* Consistent width with other inputs */
+  padding: 8px;
+  /* Better spacing inside select */
   border: 1px solid #ccc;
-  border-radius: 4px; /* Optional rounded corners */
+  border-radius: 4px;
+  /* Optional rounded corners */
   font-size: 16px;
   align-self: center;
 }
+
 .form-control:focus {
-  border-color: white; /* Keep border white on focus */
+  border-color: white;
+  /* Keep border white on focus */
   border-width: 1px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 .form-control {
   height: 4rem;
-  padding: 10px; /* Padding for input fields */
-  border: 1px solid #ccc; /* Border style */
-  border-radius: 5px; /* Rounded corners */
-  width: 100%; /* Full width */
-  margin-bottom: 1rem; /* Space below inputs */
-  position: relative; /* Positioning for tooltip */
+  padding: 10px;
+  /* Padding for input fields */
+  border: 1px solid #ccc;
+  /* Border style */
+  border-radius: 5px;
+  /* Rounded corners */
+  width: 100%;
+  /* Full width */
+  margin-bottom: 1rem;
+  /* Space below inputs */
+  position: relative;
+  /* Positioning for tooltip */
 }
+
 .floating-label {
   position: relative;
   display: flex;
@@ -193,8 +218,10 @@ select.form-control {
 
 .floating-label label {
   position: absolute;
-  top: 40%; /* New: Centers the label vertically */
-  transform: translateY(-40%); /* New: Adjusts it to be exactly centered */
+  top: 40%;
+  /* New: Centers the label vertically */
+  transform: translateY(-40%);
+  /* New: Adjusts it to be exactly centered */
   left: 1rem;
   font-size: 1rem;
   color: #aaa;
@@ -202,11 +229,11 @@ select.form-control {
   pointer-events: none;
 }
 
-.floating-label input:focus + label,
-.floating-label input:not(:placeholder-shown) + label,
-.floating-label select:focus + label,
-.floating-label select:not([value='']) + label {
-  top: -10px;
+.floating-label input:focus+label,
+.floating-label input:not(:placeholder-shown)+label,
+.floating-label select:focus+label,
+.floating-label select:not([value=""])+label {
+  top: -3px;
   left: 10px;
   font-size: 0.75rem;
   background-color: #2a7d6c;
@@ -230,41 +257,63 @@ select {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .tooltip {
-  position: absolute; /* Positioning */
-  visibility: hidden; /* Initially hidden */
+  position: absolute;
+  /* Positioning */
+  visibility: hidden;
+  /* Initially hidden */
   width: 95%;
   background: #ff7777;
-  color: #fff; /* Tooltip text color */
-  text-align: center; /* Center the text */
-  border-radius: 5px; /* Rounded corners */
-  padding: 8px; /* Padding around the text */
-  z-index: 1; /* Ensure it's above other elements */
-  opacity: 0; /* Initially invisible */
-  transition: opacity 0.3s; /* Fade-in effect */
+  color: #fff;
+  /* Tooltip text color */
+  text-align: center;
+  /* Center the text */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 8px;
+  /* Padding around the text */
+  z-index: 1;
+  /* Ensure it's above other elements */
+  opacity: 0;
+  /* Initially invisible */
+  transition: opacity 0.3s;
+  /* Fade-in effect */
   font-size: 13px;
   top: 95%;
 }
 
 /* Arrow pointing down */
 .tooltip::after {
-  content: '';
-  position: absolute; /* Position the arrow */
-  bottom: 100%; /* Position above the tooltip */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center adjustment */
-  border-width: 6px; /* Size of the arrow */
-  border-style: solid; /* Arrow style */
-  border-color: transparent transparent #ff7777 transparent; /* Arrow color: black */
+  content: "";
+  position: absolute;
+  /* Position the arrow */
+  bottom: 100%;
+  /* Position above the tooltip */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  /* Center adjustment */
+  border-width: 6px;
+  /* Size of the arrow */
+  border-style: solid;
+  /* Arrow style */
+  border-color: transparent transparent #ff7777 transparent;
+  /* Arrow color: black */
 }
 
 .tooltip.show {
-  visibility: visible; /* Show tooltip */
-  opacity: 1; /* Fade in */
+  visibility: visible;
+  /* Show tooltip */
+  opacity: 1;
+  /* Fade in */
 }
+
 .error-border {
-  border: 2px solid #ff7777; /* Change to your desired border color */
+  border: 2px solid #ff7777;
+  /* Change to your desired border color */
 }
+
 .tooltip-active {
   width: 10%;
 }
@@ -275,18 +324,37 @@ select {
   margin-left: auto;
 }
 
-/* Media Query */
+._786_flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intervention_text{
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+.intervention_text p{
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+}
 
 @media (min-width: 1116px) and (max-width: 1379px) {
   p {
     font-size: 13.5px !important;
   }
+
   .header_nav {
     padding: 2.1875rem 6rem;
   }
+
   .form_Container {
     padding: 0 6rem;
   }
+
   .contact_form_container {
     /* margin-right: -1rem;
     width: 40%;
@@ -294,45 +362,135 @@ select {
   }
 }
 
+@media (min-width: 769px) {
+  .rectangle1440p {
+    display: flex;
+  }
+
+  .rectangle360p,
+  .rectangle786p {
+    visibility: hidden;
+  }
+
+  .largeHeader {
+    display: block;
+  }
+
+  .smallHeader {
+    display: none;
+  }
+
+  ._786pForm_container {
+    display: none;
+  }
+}
+.form_content{
+  margin: 0 0; display: flex; flex-direction: row
+}
 @media (min-width: 961px) and (max-width: 1160px) {
   p {
     font-size: 13px !important;
   }
+
   .header_nav {
     padding: 2.1875rem 5rem;
   }
+
   .form_Container {
     padding: 0 6rem;
   }
+
   .contact_form_container {
     width: 45%;
     margin-left: auto;
   }
+
   .contact-form {
     padding: 1rem;
   }
+
   .form_heading {
     margin: 1rem 0;
   }
 }
-@media (min-width: 768px) and (max-width: 960px) {
+
+@media (min-width: 769px) and (max-width: 960px) {
   p {
     font-size: 12.5px !important;
   }
+
   .header_nav {
     padding: 2.1875rem 3rem;
   }
+
   .form_Container {
     padding: 0 3rem;
   }
+
   .contact_form_container {
     width: 48%;
     margin-left: auto;
   }
+
   .contact-form {
     padding: 1rem;
   }
+
   .form_heading {
     margin: 1rem 0;
+  }
+}
+@media (min-width: 700px) and (max-width: 768px) {
+  select.form-control {
+    width: 95%;
+}
+}
+
+@media (min-width: 530px) and (max-width: 768px) {
+.smallHeader{
+  display: flex;width: 100%;justify-content: right; padding-right: 2rem; margin-top: -1.5rem;
+}
+
+  .rectangle786p {
+    display: flex;
+  }
+
+  .rectangle360p,
+  .rectangle1440p,
+  .form_Container,
+  .largeHeader {
+    display: none !important;
+  }
+
+  .header_nav {
+    padding: 2.1875rem 0rem !important;
+  }
+
+  ._786pForm_container {
+    display: flex;
+    justify-content: center !important;
+  }
+.contact-form{
+  margin-bottom: 12rem;
+}
+
+  .logo {
+    padding-left: 2rem;
+  }
+
+  .header_elements {
+    justify-content: space-evenly;
+  }
+
+}
+
+@media (max-width: 529px) {
+  .rectangle360p {
+    display: flex;
+  }
+
+  .rectangle786p,
+  .rectangle1440p {
+    display: none;
   }
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get an Intervention</title>
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,24 +20,27 @@
       <div class="container">
         <div class="row header_nav">
           <div class="col-6">
-            <img
-                src="/Assets/logo.svg"
-              />
+            <img class="logo" src="/Assets/logo.svg" />
           </div>
           <div class="col-6">
             <div class="row header_elements">
               <p>HOME</p>
               <p>ABOUT</p>
-              <p>CONTACT</p>
-              <p>|</p>
-              <p>
+              <p class="contact_p">CONTACT</p>
+              <p class="largeHeader">|</p>
+              <p class="largeHeader">
                 CALL NOW
                 <span style="color: #5bc8af"> XXX.XXX.XXX</span>
               </p>
             </div>
           </div>
         </div>
-
+        <div class="smallHeader">
+          <p>
+            CALL NOW
+            <span style="color: #5bc8af"> XXX.XXX.XXX</span>
+          </p>
+        </div>
         <div class="row form_Container">
           <div class="col-6">
             <div class="intervention_text">
@@ -64,7 +67,7 @@
               <div class="contact-form">
                 <h4 class="form_heading">Contact Us</h4>
                 <form id="contactForm">
-                  <div style="margin: 0 0; display: flex; flex-direction: row">
+                  <div class="form_content">
                     <div class="form_container col-6">
                       <div class="floating-label aligned-input">
                         <input
@@ -147,43 +150,168 @@
                   <!-- Tooltip element -->
 
                   <button class="form_heading form_btn" type="button">
-                    Submit
+                    <img src="/Assets/submit_svg.svg"/>
+                    </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="_786pForm_container">
+          <div class="_786pForm">
+            <div class="_786_flex">
+
+
+              <div class="col-12">
+                <div class="intervention_text">
+                  <img
+                    style="width: 100%; height: auto"
+                    src="/Assets/GET AN INTERVENTION.svg"
+                  />
+                  <p style="padding-top: 12px">
+                    Showing greater respect to older adults can be done in several
+                    ways: acknowledging and putting to use the talents and skills of older
+                    adults; creating intergenerational initiatives; and allowing
+                    older adults to stay active and independent for as long as
+                    possible.
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="contact-form">
+                <h4 class="form_heading">Contact Us</h4>
+                <form id="contactForm">
+                  <div class="form_content">
+                    <div class="form_container col-6">
+                      <div class="floating-label aligned-input">
+                        <input
+                          placeholder=" "
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          class="form-control tooltip-active"
+                          required
+                          data-original-title="This field can’t be empty. Please fill it in.."
+                          title=""
+                        />
+                        <label for="firstName">First Name</label>
+                        <div class="tooltip"></div>
+                        <!-- Tooltip element -->
+                      </div>
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="email"
+                          id="businessEmail"
+                          name="businessEmail"
+                          class="form-control"
+                          required
+                          data-original-title="Please enter a valid email address."
+                          title=""
+                        />
+                        <label for="businessEmail">Business Email</label>
+                        <div class="tooltip"></div>
+                        <!-- Tooltip element -->
+                      </div>
+                    </div>
+
+                    <div class="form_container col-6">
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          class="form-control"
+                          required
+                          data-original-title="This field can’t be empty. Please fill it in.."
+                          title=""
+                        />
+                        <label for="lastName">Last Name</label>
+                        <div class="tooltip"></div>
+                        <!-- Tooltip element -->
+                      </div>
+                      <div class="floating-label">
+                        <input
+                          placeholder=" "
+                          type="text"
+                          id="company"
+                          name="company"
+                          class="form-control"
+                          data-original-title="This field can’t be empty. Please fill it in.."
+                          title=""
+                        />
+                        <label for="company">Company</label>
+                        <div class="tooltip"></div>
+                        <!-- Tooltip element -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <select
+                    id="country"
+                    name="country"
+                    class="form-control"
+                    required
+                    data-original-title="Please select a country."
+                    title=""
+                  >
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                  </select>
+
+                  <!-- Tooltip element -->
+
+                  <button class="form_heading form_btn" type="button">
+                  <img src="/Assets/submit_svg.svg"/>
                   </button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-
         <!-- wave -->
       </div>
       <div>
-        <div class="wave-container">
-          <svg
-            viewBox="0 0 1440 111"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style="width: 100%; height: auto"
-          >
-            <path
-              d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z"
-              fill="#F5F5F5"
-              fill-opacity="0.3"
-            />
-            <path
-              d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z"
-              fill="#F5F5F5"
-              fill-opacity="0.3"
-            />
-          </svg>
+        <div class="rectangle1440p">
+          <div class="wave-container">
+            <svg
+              viewBox="0 0 1440 111"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 100%; height: auto"
+            >
+              <path
+                d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z"
+                fill="#F5F5F5"
+                fill-opacity="0.3"
+              />
+              <path
+                d="M0 68.6766C310 -147.298 926 229.879 1440 68.6766V111H0V68.6766Z"
+                fill="#F5F5F5"
+                fill-opacity="0.3"
+              />
+            </svg>
+          </div>
+          <div class="wave-container">
+            <img style="width: 100%" src="./Assets/Rectangle 2.png" />
+          </div>
         </div>
-        <div class="wave-container">
-          <img style="width: 100%" src="./Assets/Rectangle 2.png" />
+
+        <div class="rectangle786p">
+          <div class="wave-container">
+            <img style="width: 100%" src="./Assets/header_ractangle_786.svg" />
+          </div>
+        </div>
+        <div class="rectangle360p">
+          <div class="wave-container">
+            <img style="width: 100%" src="./Assets/header_ractangle_360.svg" />
+          </div>
         </div>
       </div>
     </header>
-    
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
