@@ -82,4 +82,38 @@ function calculateAdjustedDistanceToRight(pElement) {
   // Return the distance
   return distanceToRight;
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggleBtn = document.getElementById('menuToggleBtn');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const menuItems = document.querySelectorAll('.dropdown-menu__item'); // Select all <li> elements
+  let menuOpen = false;
+
+  // Toggle menu on hamburger icon click
+  menuToggleBtn.onclick = () => {
+    toggleMenu();
+  };
+
+  // Close menu on any <li> click
+  menuItems.forEach(item => {
+    item.onclick = () => {
+      closeMenu();
+    };
+  });
+
+  // Function to toggle the menu
+  function toggleMenu() {
+    if (menuOpen) {
+      dropdownMenu.style.display = 'none'; // Hide menu
+    } else {
+      dropdownMenu.style.display = 'block'; // Show menu
+    }
+    menuOpen = !menuOpen; // Toggle state
+  }
+
+  // Function to close the menu
+  function closeMenu() {
+    dropdownMenu.style.display = 'none'; // Hide menu
+    menuOpen = false; // Reset state
+  }
+});
 
