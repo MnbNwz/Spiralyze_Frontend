@@ -2,9 +2,11 @@
   position: relative;
   width: 100%;
 
-  background-image: linear-gradient(180deg,
+  background-image: linear-gradient(
+      180deg,
       #194d41 0%,
-      rgba(25, 77, 65, 0.7) 100%),
+      rgba(25, 77, 65, 0.7) 100%
+    ),
     url("/Assets//image 2.png");
 
   background-size: cover;
@@ -12,7 +14,17 @@
   background-position: center;
   overflow: auto;
 }
-
+.hover_effecting_para,
+.first_el {
+  &:hover {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+.first_el {
+  text-decoration: underline;
+  font-weight: 700;
+}
 .header::after {
   content: "";
   position: absolute;
@@ -55,13 +67,6 @@
   color: #5bc8af;
 }
 
-
-
-.intervention_text p {
-  font-weight: 400;
-  line-height: 24px;
-}
-
 .get_text {
   border: 1px solid #ffffff;
 }
@@ -77,7 +82,6 @@
 
 ._786pForm {
   width: 70% !important;
-
 }
 
 .form_Container {
@@ -229,10 +233,10 @@ select.form-control {
   pointer-events: none;
 }
 
-.floating-label input:focus+label,
-.floating-label input:not(:placeholder-shown)+label,
-.floating-label select:focus+label,
-.floating-label select:not([value=""])+label {
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label select:focus + label,
+.floating-label select:not([value=""]) + label {
   top: -3px;
   left: 10px;
   font-size: 0.75rem;
@@ -324,22 +328,23 @@ select {
   margin-left: auto;
 }
 
-._786_flex{
+._786_flex {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.intervention_text{
+.intervention_text {
   margin-top: 56px;
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
 }
-.intervention_text p{
-  font-size: 18px;
-  line-height: 28px;
+.intervention_text p {
+  font-size: 14px;
   text-align: center;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 @media (min-width: 1116px) and (max-width: 1379px) {
@@ -368,24 +373,21 @@ select {
   }
 
   .rectangle360p,
+  .header_menu,
+  .smallHeader,
+  ._786pForm_container,
   .rectangle786p {
-    visibility: hidden;
+    display: none !important;
   }
 
   .largeHeader {
     display: block;
   }
-
-  .smallHeader {
-    display: none;
-  }
-
-  ._786pForm_container {
-    display: none;
-  }
 }
-.form_content{
-  margin: 0 0; display: flex; flex-direction: row
+.form_content {
+  margin: 0 0;
+  display: flex;
+  flex-direction: row;
 }
 @media (min-width: 961px) and (max-width: 1160px) {
   p {
@@ -443,19 +445,24 @@ select {
 @media (min-width: 700px) and (max-width: 768px) {
   select.form-control {
     width: 95%;
-}
+  }
 }
 
 @media (min-width: 530px) and (max-width: 768px) {
-.smallHeader{
-  display: flex;width: 100%;justify-content: right; padding-right: 2rem; margin-top: -1.5rem;
-}
+  .smallHeader {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    padding-right: 2rem;
+    margin-top: -1.5rem;
+  }
 
   .rectangle786p {
     display: flex;
   }
 
   .rectangle360p,
+  .header_menu,
   .rectangle1440p,
   .form_Container,
   .largeHeader {
@@ -470,9 +477,9 @@ select {
     display: flex;
     justify-content: center !important;
   }
-.contact-form{
-  margin-bottom: 12rem;
-}
+  .contact-form {
+    margin-bottom: 40%;
+  }
 
   .logo {
     padding-left: 2rem;
@@ -481,16 +488,49 @@ select {
   .header_elements {
     justify-content: space-evenly;
   }
-
+  .intervention_text p {
+    line-height: 28px;
+  }
 }
 
 @media (max-width: 529px) {
+  ._786pForm_container,
   .rectangle360p {
     display: flex;
   }
-
+  .header_menu {
+    display: flex;
+    justify-content: right;
+    margin-right: 0 !important;
+  }
   .rectangle786p,
+  .header_elements,
+  .smallHeader,
+  .form_Container,
   .rectangle1440p {
-    display: none;
+    display: none !important;
+  }
+
+  ._786pForm {
+    width: 100% !important;
+  }
+  .form_content {
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #contactForm input.form-control,
+  .form_container {
+    width: 100% !important;
+  }
+
+  .floating-label {
+    width: 97.5%;
+  }
+  .contact-form {
+    margin-bottom: 50%;
+  }
+  .header_nav {
+    padding: 1.125rem 1rem;
   }
 }
