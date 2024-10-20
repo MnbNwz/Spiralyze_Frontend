@@ -12,7 +12,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow: auto;
+  overflow: hidden;
 }
 .hover_effecting_para,
 .first_el {
@@ -38,7 +38,7 @@
   z-index: 1;
 }
 
-.container {
+.header_container {
   position: relative;
   min-height: 40.625rem;
   z-index: 200;
